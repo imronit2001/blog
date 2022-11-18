@@ -22,3 +22,10 @@ Run `ng generate component componentname --inline-template`
 
 # Component with inline template and style
 Run `ng generate component componentname --inline-style --inline-template`
+
+# Module
+Run `ng g module modulename`
+
+# Component under Module
+Run `ng generate component modulename/componentname`
+
