@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
+  data = "Hello Ronit"
+  num = 7
+  getName(){
+    alert("FunctionCalled");
+  }
+  displayName(name:String){
+    alert(name);
+  }
+  displayFullName(fname:String,lname:String){
+    alert(fname+" "+lname);
+  }
 }
