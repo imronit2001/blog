@@ -18,4 +18,7 @@ export class AppComponent {
   displayFullName(fname:String,lname:String){
     alert(fname+" "+lname);
   }
+  getData(val:String){
+    console.warn(val);
+  }
 }

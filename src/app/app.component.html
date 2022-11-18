@@ -7,3 +7,13 @@
 <button (click)="getName()">Click Me</button>
 <button (click)="displayName('Ronit')">Display Name</button>
 <button (click)="displayFullName('Ronit','Singh')">Display Full Name</button>
+<br><br>
+<input type="text" placeholder="Event Keyup" #input1 (keyup)="getData(input1.value)">
+<br><br>
+<input type="text" placeholder="Event Keydown" #input2 (keydown)="getData(input2.value)">
+<br><br>
+<input type="text" placeholder="Event Blur" #input3 (blur)="getData(input3.value)">
+<br><br>
+<input type="text" placeholder="Event Input" #input4 (input)="getData(input4.value)">
+<h1 (mouseover)="getData('MouseOver')">Event MouseOver</h1>
+<h1 (mouseleave)="getData('MouseLeave')">Event MouseLeave</h1>
