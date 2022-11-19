@@ -1,9 +1,48 @@
 <h1 class="text-center text-capitalize">{{ title }}</h1>
 <div class="py-3 row">
-    <div class="col-sm-4 text-center m-auto">
-        <p>Interpolation works on `String` and `Number`</p>
-        <input type="text" placeholder="Interpolation" disabled="{{ disable }}" class="form-control my-2">
-        <p>Property Binding works on `String`,`Number` and `Boolean`</p>
-        <input type="text" placeholder="Property Binding" [disabled]="disable" class="form-control my-2">
+    <div class="col-sm-4 text-center m-auto my-2">
+        <button class="btn btn-primary" (click)="toggle()" *ngIf="show">Login Button</button>
+        <button class="btn btn-success" (click)="toggle()" *ngIf="!show">Signup Button</button>
     </div>
+    <div class="col-sm-4 text-center m-auto my-2">
+        <button class="btn btn-primary" (click)="toggle()" *ngIf="show else elseBlock1">Login Button</button>
+    </div>
+    <div class="col-sm-4 text-center m-auto my-2">
+        <button *ngIf="show; then ifBlock1 else elseBlock1"></button>
+    </div>
+</div>
+
+<ng-template #elseBlock1>
+    <button class="btn btn-success" (click)="toggle()" *ngIf="!show">Signup Button</button>
+</ng-template>
+
+<ng-template #ifBlock1>
+    <button class="btn btn-primary" (click)="toggle()" *ngIf="show">Login Button</button>
+</ng-template>
+
+
+<h1 class="text-center text-capitalize">{{ title2 }}</h1>
+<div class="py-3 row">
+    <div class="col-sm-4 text-center m-auto my-2">
+        <input type="text" class="form-control" (keyup)="changeColor(inpColor.value)" #inpColor
+            placeholder="Enter Color">
+        <div class="col-sm-6 text-center m-auto my-2">
+            <ng-template [ngIf]="color=='red'">
+                <h1 class="text-danger">Text Color</h1>
+            </ng-template>
+            <ng-template [ngIf]="color=='green'">
+                <h1 class="text-success">Text Color</h1>
+            </ng-template>
+            <ng-template [ngIf]="color=='blue'">
+                <h1 class="text-primary">Text Color</h1>
+            </ng-template>
+            <ng-template [ngIf]="color=='black'">
+                <h1 class="text-dark">Text Color</h1>
+            </ng-template>
+            <ng-template [ngIf]="color=='orange'">
+                <h1 class="text-warning">Text Color</h1>
+            </ng-template>
+        </div>
+    </div>
+
 </div>

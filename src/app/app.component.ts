@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: []
 })
 export class AppComponent {
-  title:String = 'Property Binding';
-  disable = false;
+  title:String = 'Conditions (if-else)';
+  title2:String = 'Multiple conditions';
+  show = true;
+  color = '';
+  toggle(){
+    this.show = !this.show;
+  }
+  changeColor(val:string){
+    this.color = val;
+  }
 }
