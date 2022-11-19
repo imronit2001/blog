@@ -1,19 +1,6 @@
-<h1>Hello Ronit</h1>
-<p>Welcome to the new project <b>{{ title }}</b></p>
-<app-user-list></app-user-list>
-<app-student-list></app-student-list>
-<app-country-list></app-country-list>
-<!-- <app-login></app-login> -->
-<button (click)="getName()">Click Me</button>
-<button (click)="displayName('Ronit')">Display Name</button>
-<button (click)="displayFullName('Ronit','Singh')">Display Full Name</button>
-<br><br>
-<input type="text" placeholder="Event Keyup" #input1 (keyup)="getData(input1.value)">
-<br><br>
-<input type="text" placeholder="Event Keydown" #input2 (keydown)="getData(input2.value)">
-<br><br>
-<input type="text" placeholder="Event Blur" #input3 (blur)="getData(input3.value)">
-<br><br>
-<input type="text" placeholder="Event Input" #input4 (input)="getData(input4.value)">
-<h1 (mouseover)="getData('MouseOver')">Event MouseOver</h1>
-<h1 (mouseleave)="getData('MouseLeave')">Event MouseLeave</h1>
+<h1 class="text-center text-capitalize">{{ title }}</h1>
+<input type="text" #box class="form-control" placeholder="Enter Your Name" name="name">
+<button class="btn btn-primary my-2" (click)="getValue(box.value)">Click</button>
+<button class="btn btn-primary my-2" (click)="getValue(box.name)">Click</button>
+<button class="btn btn-primary my-2" (click)="getValue(box.placeholder)">Click</button>
+<p class="py-3 fw-bold">Input Box Value : {{ displayVal }}</p>

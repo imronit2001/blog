@@ -6,19 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: []
 })
 export class AppComponent {
-  title = 'blog';
-  data = "Hello Ronit"
-  num = 7
-  getName(){
-    alert("FunctionCalled");
-  }
-  displayName(name:String){
-    alert(name);
-  }
-  displayFullName(fname:String,lname:String){
-    alert(fname+" "+lname);
-  }
-  getData(val:String){
+  title:String = 'Get Input Box Value';
+  displayVal:String = '';
+  getValue(val:String){
     console.warn(val);
+    this.displayVal = val;
   }
 }
